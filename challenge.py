@@ -27,7 +27,7 @@ def grayscale(img):
     but NOTE: to see the returned image as grayscale
     (assuming your grayscaled image is called 'gray')
     you should call plt.imshow(gray, cmap='gray')"""
-    kernel_size = 3
+    kernel_size = 5
     blur_gray = cv2.GaussianBlur(img,(kernel_size, kernel_size), 0)
     return cv2.cvtColor(blur_gray, cv2.COLOR_RGB2GRAY)
         # Or use BGR2GRAY if you read an image with cv2.imread()
@@ -90,7 +90,7 @@ def annotadedFrame(image):
     img = mpimg.imread(image)
     copyImg = filterLanes(img)
     gray = grayscale(copyImg)
-    edges = canny(gray,48,133) 
+    edges = canny(gray,112,255) 
     # Define the Hough transform parameters
     # Make a blank the same size as our image to draw on
     rho = 2 # distance resolution in pixels of the Hough grid
@@ -120,7 +120,7 @@ def annotadedFrame(image):
 def annotadedFrameVideo(img):
     copyImg = filterLanes(img)
     gray = grayscale(copyImg)
-    edges = canny(gray,48,133) 
+    edges = canny(gray,112,255) 
     # Define the Hough transform parameters
     # Make a blank the same size as our image to draw on
     rho = 2 # distance resolution in pixels of the Hough grid
@@ -162,18 +162,17 @@ def main():
     #     plt.show()
     
     fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-    out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (490,290))
+    out = cv2.VideoWriter('test_videos_output/output.mp4', fourcc, 20.0, (490,290))
     cap = cv2.VideoCapture('test_videos/solidYellowLeft.mp4')
     
     while(cap.isOpened()):
           ret, frame = cap.read()
           newFrame = annotadedFrameVideo(frame) 
-          newframe = cv2.resize(newFrame, (490, 290), fx = 0, fy = 0, 
+          wFrame = cv2.resize(newFrame, (490, 290), fx = 0, fy = 0, 
                          interpolation = cv2.INTER_CUBIC)
-          wframe = newframe
-          cv2.imshow('frame', wframe)
+          cv2.imshow('frame', wFrame)
           #frame = cv2.flip(frame,0)
-          out.write(wframe)
+          out.write(wFrame)
          
           if cv2.waitKey(1) & 0xFF == ord('q'):
                break
