@@ -1,5 +1,5 @@
 
-**Finding Lane Lines on the Road**
+### **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
 
@@ -30,6 +30,39 @@ On this first iteration of the pipeline, the draw_lines method was modified to b
 the screen. I followed an original approach for that problem and I decided to use the Bresenham algorithm to
 draw the lines:  imported in the Python script a generator for producing a tuple of
 points accordlyng to the Bresenham algorithm, the lines are then drawn using a polyfit from Matplotlib.
+
+
+
+
+[//]: # (Image References)
+
+[image1]: ./examples/grayscale.jpg "Grayscale"
+
+---
+
+
+If you'd like to include images to show how the pipeline works, here is how to include an image: 
+
+![alt text][image1]
+
+
+### 2. Potential shortcomings within the  current pipeline
+
+Important shortcomings regards the improvement of the lanes filtering and fine tuning of the
+Canny and Hough algorithms for isolate the lanes in all possible weather conditions:
+when the images are taken in rainy days or not in sunny conditions, the lanes finding could
+be hard and create some side effects (as result , we can have strange lines drawn on the screen
+or not coherent with the road lines contours).
+
+The draw lines actually implemented in this first iteration is actually time to time
+producing some additional lines not aligned with the contours of the lines road.
+
+
+### 3. Possible improvements to your pipeline
+
+A first improvement  to the pipeline, in a next iteration of the script,  would be a better implementation of the draw_lines function : this is order to select and delete all the not coherent lines drawn. Another possible 
+improvement migth be to choose a different polinomial approximation of the lines made by the Matplotlib polyfit (change or modify the algorithms used, increase the degrees, so on).
+
 
 
 
