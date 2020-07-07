@@ -30,7 +30,7 @@ points accordlyng to the Bresenham algorithm, the lines are then drawn in the en
 
 Here is a video for showing the result of the image processing of the frames using the method explained. 
 
-[![Watch the video](https://img.youtube.com/vi/Mtemx1gzUhk/maxresdefault.jpg)](https://youtu.be/Mtemx1gzUhk)
+[![annotaded lines](https://img.youtube.com/vi/Mtemx1gzUhk/hqdefault.jpg)](https://youtu.be/Mtemx1gzUhk)
 
 ---
 
