@@ -28,19 +28,9 @@ the screen. I followed an original approach for that problem and I decided to us
 draw the lines:  imported in the Python script a generator for producing a tuple of
 points accordlyng to the Bresenham algorithm, the lines are then drawn in the end using a polyfit from Matplotlib.
 
----
+Here is a video for showing the result of the image processing of the frames using the method explained. 
 
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
-
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
+[![Watch the video](https://img.youtube.com/vi/Mtemx1gzUhk/maxresdefault.jpg)](https://youtu.be/Mtemx1gzUhk)
 
 ---
 
@@ -63,14 +53,3 @@ A first improvement  to the pipeline, in a next iteration of the script,  would 
 improvement migth be to choose a different polinomial approximation of the lines drawn by the Matplotlib polyfit (change or modify the algorithms used, increase the degrees, so on). Better fine tuning of the parameter of Hough transform and Canny algorithms can be also taken in account to improve the line finding in general. 
 
 ---
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
----
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
