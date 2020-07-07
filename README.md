@@ -14,14 +14,14 @@ the lanes on the road.
 
 In brief, the first  iteration  of the pipeline consist of the following steps:
 
-a) Filter the images or the frame taken using HSL color space filtering. This is particulary important
+1. Filter the images or the frame taken using HSL color space filtering. This is particulary important
    to distinguish and select the yellow and white lines from the "outside" world.
-b) Convert the image / frame produced to grayscale in order to filter even better the lanes.
-c) Apply the Canny algorithm to the image
-d) Apply and configure and tune  the Hough transform to the frame produced in the steps a), b) and c)
-e) Select the region of interest for that filtering process (we can image to select a region of interest
+2.  Convert the image / frame produced to grayscale in order to filter even better the lanes.
+3.  Apply the Canny algorithm to the image
+4.  Apply and configure and tune  the Hough transform to the frame produced in the steps 1, 2 and 3
+5.  Select the region of interest for that filtering process (we can image to select a region of interest
    coherent with the image taken from a camera mounted on the top of the car).
-f) Draw the lines filtered after the application of the steps explained and then merge the images; the result will be a "sum" of the original image and the image with the lines produced by the algorithm.
+6.  Draw the lines filtered after the application of the steps explained and then merge the images; the result will be a "sum" of the original image and the image with the lines produced by the algorithm.
 
 On this first iteration of the pipeline, the draw_lines method was modified to better raster the lines on
 the screen. I followed an original approach for that problem and I decided to use the Bresenham algorithm to
