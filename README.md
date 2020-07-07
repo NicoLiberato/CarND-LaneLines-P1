@@ -44,7 +44,7 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 ---
 
-### 2. Potential shortcomings within the  current pipeline
+### 2. Potential shortcomings with the current pipeline
 
 Important shortcomings regards the improvement of the lanes filtering and fine tuning of the
 Canny and Hough algorithms for isolate the lanes in all possible weather conditions:
@@ -57,10 +57,10 @@ producing some additional lines not coherent with the contours of the lines road
 
 ---
 
-### 3. Possible improvements to your pipeline
+### 3. Possible improvements to the pipeline
 
 A first improvement  to the pipeline, in a next iteration of the script,  would be a better implementation of the draw_lines function : this is order to select and delete all the not coherent lines . Other hands , another possible 
-improvement migth be to choose a different polinomial approximation of the lines drawn by the Matplotlib polyfit (change or modify the algorithms used, increase the degrees, so on).
+improvement migth be to choose a different polinomial approximation of the lines drawn by the Matplotlib polyfit (change or modify the algorithms used, increase the degrees, so on). Better fine tuning of the parameter of Hough transform and Canny algorithms can be also taken in account to improve the line finding in general. 
 
 ---
 
